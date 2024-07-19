@@ -30,7 +30,7 @@ export default function Home() {
 
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Growth</p>
-                  <p className="">Tutoring is different from teaching: I am here to grow with my students, not to lecture them. We will learn how to navigate the educational system to meet your goals together</p>
+                  <p>Tutoring is different from teaching: I am here to grow with my students, not to lecture them. We will learn how to navigate the educational system to meet your goals <span className="underline">together</span>.</p>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
                 <div className="text-5xl text-schedule"><FaLock/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Confidentiality</p>
-                  <p className="">Trust that your work with me is 100% confidential</p>
+                  <p className="">Trust that your work with me is 100% confidential.</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
                 <div className="text-5xl text-schedule"><FaLock/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Transparency</p>
-                  <p className="">I’d be happy to speak with you about my professional experience, tutoring experience, or any other questions. I’ll tell you how I can help, and what my shortcomings may be</p>
+                  <p className=""> Let’s get to know each other! I’m happy to speak with you about my professional experience, tutoring experience, or anything else. I’ll tell you how I can help, and what my shortcomings may be.</p>
                 </div>
               </div>
           </div>
