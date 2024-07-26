@@ -2,7 +2,7 @@ import Background from "../background";
 import ContactMeButton from "../contactmebutton";
 import NavBar from "../navbar";
 import Image from "next/image";
-import NoahFormal from "./NoahFormal.jpg";
+import NoahFormal from "/NoahFormal.jpg";
 
 export default function AboutMe() {
     return (
