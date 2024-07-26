@@ -1,3 +1,4 @@
+"use client"
 import Background from "../background";
 import ContactMeButton from "../contactmebutton";
 import NavBar from "../navbar";
