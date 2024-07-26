@@ -3,6 +3,10 @@ import ContactMeButton from "./contactmebutton";
 import NavBar from "./navbar";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { IoIosWater } from "react-icons/io";
+import { LuSprout } from "react-icons/lu";
+
 
 
 export default function Home() {
@@ -18,6 +22,7 @@ export default function Home() {
 
         <div className="text-4xl flex justify-center mb-2">
           <MdKeyboardDoubleArrowDown/>
+          
         </div>
       </div>
 
@@ -26,7 +31,7 @@ export default function Home() {
           <div className="text-3xl font-semibold">MY VALUES</div>
           <div className=" grid grid-cols-2 gap-4 p-4 w-3/4">
             <div className="flex p-8 items-center">
-                <div className="text-5xl text-schedule"><FaLock/></div>
+                <div className="text-5xl text-schedule"><LuSprout/></div>
 
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Growth</p>
@@ -35,7 +40,7 @@ export default function Home() {
               </div>
 
               <div className="flex p-8 items-center">
-                <div className="text-5xl text-schedule"><FaLock/></div>
+                <div className="text-5xl text-schedule"><IoIosWater/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Adaptability</p>
                   <p className="">As both an experienced tutor and a current student, I am here to meet the unique needs of each individual. I understand that goals change, and am here to make them a reality</p>
@@ -51,7 +56,7 @@ export default function Home() {
               </div>
 
               <div className="flex p-8 items-center">
-                <div className="text-5xl text-schedule"><FaLock/></div>
+                <div className="text-5xl text-schedule"><FaMagnifyingGlass/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Transparency</p>
                   <p className=""> Let’s get to know each other! I’m happy to speak with you about my professional experience, tutoring experience, or anything else. I’ll tell you how I can help, and what my shortcomings may be.</p>

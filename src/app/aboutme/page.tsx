@@ -1,7 +1,8 @@
 import Background from "../background";
 import ContactMeButton from "../contactmebutton";
 import NavBar from "../navbar";
-
+import Image from "next/image";
+import NoahFormal from "./NoahFormal.jpg";
 
 export default function AboutMe() {
     return (
@@ -10,10 +11,14 @@ export default function AboutMe() {
             <div className="flex flex-col h-screen">
                 <NavBar/>
                 <div className="flex items-center justify-center grow">
-                    <div className="flex w-1/2">
-                        <img src="/NoahFormal.jpg" alt="Formal image of Noah" className="w-1/2 rounded-xl mr-2"/>
+                    <div className="flex w-1/2 h-full items-center justify-center">
+                        <Image
+                            src={NoahFormal}
+                            alt="Formal Image of Noah"
+                            className="object-center w-1/2 rounded-xl mr-2 h-auto object-contain"
+                        />
                         <div className="w-1/2 ml-2">
-                            <div className="text-6xl font-medium">Noah Kim</div>
+                            <div className="text-6xl font-medium pb-1">Noah Kim</div>
                             <p className="">Noah’s tutoring career started five years ago in his town’s public library helping his friends with SAT problems they were having trouble with. Four years later, he’s accumulated experience teaching students of all ages, ranging from subjects such as middle school math and english to AP Calculus and SAT.  Noah’s goal is to help people achieve their academic goals in a timeframe that works for them.
                             <br></br>
                             <br></br>
