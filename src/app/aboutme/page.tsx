@@ -2,7 +2,6 @@ import Background from "../background";
 import ContactMeButton from "../contactmebutton";
 import NavBar from "../navbar";
 import Image from "next/image";
-import NoahFormal from "./NoahFormal.jpg";
 
 export default function AboutMe() {
     return (
@@ -11,11 +10,13 @@ export default function AboutMe() {
             <div className="flex flex-col h-screen">
                 <NavBar/>
                 <div className="flex items-center justify-center grow">
-                    <div className="flex w-1/2 h-full items-center justify-center">
+                    <div className="flex w-1/2">
                         <Image
-                            src={NoahFormal}
+                            src='/NoahFormal.jpg'
                             alt="Formal Image of Noah"
-                            className="object-center w-1/2 rounded-xl mr-2 h-auto object-contain"
+                            className="object-center w-1/2 rounded-xl mr-2h-auto object-contain"
+                            width={800}
+                            height={800}
                         />
                         <div className="w-1/2 ml-2">
                             <div className="text-6xl font-medium pb-1">Noah Kim</div>
