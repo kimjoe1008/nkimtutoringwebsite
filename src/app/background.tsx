@@ -5,7 +5,7 @@ export default function Background(){
         <Image
             src="/SkyLine.jpg"
             alt="Skyline background image"
-            className="absolute inset-0 -z-10 h-full w-full"
+            className="fixed inset-0 -z-10 w-full object-cover top:0"
             height={3000}
             width={3000}
         />
