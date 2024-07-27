@@ -14,7 +14,7 @@ export default function AboutMe() {
                         <Image
                             src='/NoahFormal.jpg'
                             alt="Formal Image of Noah"
-                            className="object-center w-1/2 rounded-xl mr-2h-auto object-contain"
+                            className="object-center w-1/2 rounded-xl mr-2 h-auto object-contain"
                             width={800}
                             height={800}
                         />
