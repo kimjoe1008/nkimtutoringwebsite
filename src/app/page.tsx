@@ -16,12 +16,25 @@ export default function Home() {
       <div className="flex flex-col min-h-screen">
         <NavBar/>
 
-        <div className="flex-grow flex justify-center items-center">
-          <div className="text-5xl">Basic quote about learning</div>
+        <div className="flex-grow flex justify-center items-center mt-24">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="text-4xl font-semibold mb-4">Subjects Taught</div>
+            {/* Top row with 2 boxes */}
+            <div className="flex space-x-4">
+                <div className="bg-navbar text-black p-20 rounded-lg">Box 1</div>
+                <div className="bg-navbar text-black p-20 rounded-lg">Box 2</div>
+            </div>
+            {/* Bottom row with 3 boxes */}
+            <div className="flex space-x-4">
+                <div className="bg-navbar text-black p-20 rounded-lg">Box 3</div>
+                <div className="bg-navbar text-black p-20 rounded-lg">Box 4</div>
+                <div className="bg-navbar text-black p-20 rounded-lg">Box 5</div>
+            </div>
+          </div>
         </div>
 
-        <div className="text-4xl flex justify-center mb-2">
-          <MdKeyboardDoubleArrowDown/>
+        <div className="text-6xl flex justify-center mb-2">
+          <MdKeyboardDoubleArrowDown className="text-schedule"/>
           
         </div>
       </div>
@@ -30,7 +43,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           <div className="text-3xl font-semibold">MY VALUES</div>
           <div className=" grid grid-cols-2 gap-4 p-4 w-3/4">
-            <div className="flex p-8 items-center">
+            <div className="flex p-6 m-2 items-center bg-navbar rounded-xl">
                 <div className="text-5xl text-schedule"><LuSprout/></div>
 
                 <div className="flex-col w-full text-center">
@@ -39,7 +52,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex p-8 items-center">
+              <div className="flex p-6 m-2 items-center bg-navbar rounded-xl">
                 <div className="text-5xl text-schedule"><IoIosWater/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Adaptability</p>
@@ -47,7 +60,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex p-8 items-center">
+              <div className="flex p-6 m-2 items-center bg-navbar rounded-xl">
                 <div className="text-5xl text-schedule"><FaLock/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Confidentiality</p>
@@ -55,7 +68,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex p-8 items-center">
+              <div className="flex p-6 m-2 items-center bg-navbar rounded-xl">
                 <div className="text-5xl text-schedule"><FaMagnifyingGlass/></div>
                 <div className="flex-col w-full text-center">
                   <p className="text-2xl font-medium">Transparency</p>
