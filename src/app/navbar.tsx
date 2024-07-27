@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavBar(){
     return(
-        <main className="flex h-24 bg-navbar justify-between items-center relative top-0 w-full">
+        <main className="flex h-24 bg-navbar justify-between items-center fixed w-full">
             {/*directory bar*/}
             <div className="flex h-full justify-center align-items:stretch">
                 <Link className="flex hover:text-slate-200 transition duration-400 ease-in-out text-xl px-8 max-w-full items-center align-content:center justify-center" href="/">Home</Link>

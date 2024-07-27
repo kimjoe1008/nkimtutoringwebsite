@@ -9,7 +9,7 @@ export default function AboutMe() {
             <Background />
             <div className="flex flex-col h-screen">
                 <NavBar/>
-                <div className="flex items-center justify-center grow">
+                <div className="flex items-center justify-center grow mt-24">
                     <div className="flex w-1/2">
                         <Image
                             src='/NoahFormal.jpg'
