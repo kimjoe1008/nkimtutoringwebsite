@@ -21,14 +21,14 @@ export default function Home() {
             <div className="text-4xl font-semibold mb-4">Subjects Taught</div>
             {/* Top row with 2 boxes */}
             <div className="flex space-x-4">
-                <div className="bg-navbar text-black p-20 rounded-lg">Box 1</div>
-                <div className="bg-navbar text-black p-20 rounded-lg">Box 2</div>
+                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 1</div>
+                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 2</div>
             </div>
             {/* Bottom row with 3 boxes */}
             <div className="flex space-x-4">
-                <div className="bg-navbar text-black p-20 rounded-lg">Box 3</div>
-                <div className="bg-navbar text-black p-20 rounded-lg">Box 4</div>
-                <div className="bg-navbar text-black p-20 rounded-lg">Box 5</div>
+                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 3</div>
+                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 4</div>
+                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 5</div>
             </div>
           </div>
         </div>
