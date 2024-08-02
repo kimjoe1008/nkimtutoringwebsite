@@ -1,18 +1,17 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
- 
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const Name = searchParams.get('Name');
-  const Review = searchParams.get('Review');
- 
+  const name = searchParams.get('name');
+  const review = searchParams.get('review');
+
   try {
-    if (!Name || !Review) throw new Error('Name and review required');
-    await sql`INSERT INTO Reviews (Approved, Name, Review) VALUES ('denied', ${Name}, ${Review});`;
+    if (!name || !review) throw new Error('Name and Review required');
+    await sql`
+      INSERT INTO reviews (approved, name, review)
+      VALUES ('denied', ${name}, ${review});`;
   } catch (error) {
     return NextResponse.json({ error }, { status: 500 });
   }
- 
-  const reviews = await sql`SELECT * FROM Reviews;`;
-  return NextResponse.json({ reviews }, { status: 200 });
 }

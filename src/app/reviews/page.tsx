@@ -1,59 +1,37 @@
-"use client"
-import Background from "../background";
-import NavBar from "../navbar";
-import React, { useState } from 'react';
 
-export default function Reviews(){
-    const [name, setName] = useState('');
-    const [review, setReview] = useState('');
+import { sql } from '@vercel/postgres'; // Adjust according to your SQL client
 
-    const handleSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
+export default function Page() {
+  // Server action to handle form submission and insert a record into the Reviews table
+  async function handleAddReview(formData: FormData) {
+    'use server';
 
-        const response = await fetch('/api/addReview', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, review }),
-        });
+    // Extract form data
+    const name = formData.get('name') as string;
+    const review = formData.get('review') as string;
 
-        if (response.ok) {
-        alert('Review submitted successfully!');
-        setName('');
-        setReview('');
-        } else {
-        alert('Failed to submit review.');
-        }
-    };
+    // Insert the form data into the Reviews table
+    await sql`
+      INSERT INTO Reviews (Approved, Name, Review) 
+      VALUES ('denied', ${name}, ${review});
+    `;
+  }
 
-    return(
-        <main>
-            <Background/>
-            <NavBar/>
-            <h1>Submit a Review</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                <label htmlFor="name">Name:</label>
-                <input
-                    id="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                </div>
-                <div>
-                <label htmlFor="review">Review:</label>
-                <textarea
-                    id="review"
-                    value={review}
-                    onChange={(e) => setReview(e.target.value)}
-                    required
-                />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </main>
-    );
+  return (
+    <form action={handleAddReview}>
+      <div>
+        <label htmlFor="approved">Approved:</label>
+        <input type="text" id="approved" name="approved" required />
+      </div>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label htmlFor="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+      </div>
+      <button type="submit">Submit Review</button>
+    </form>
+  );
 }
