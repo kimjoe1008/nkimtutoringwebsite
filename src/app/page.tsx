@@ -6,6 +6,7 @@ import { FaLock } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoIosWater } from "react-icons/io";
 import { LuSprout } from "react-icons/lu";
+import Image from "next/image";
 
 
 
@@ -13,22 +14,22 @@ export default function Home() {
   return(
     <main className="relative min-h-screen overflow-hidden">
       <Background/>
-      <div className="flex flex-col min-h-screen">
-        <NavBar/>
-
+      <NavBar/>
+      <div className="flex flex-col h-screen">
+        
         <div className="flex-grow flex justify-center items-center mt-24">
           <div className="flex flex-col items-center space-y-4">
             <div className="text-4xl font-semibold mb-4">Subjects Taught</div>
             {/* Top row with 2 boxes */}
             <div className="flex space-x-4">
-                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 1</div>
-                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 2</div>
+                <div className="flex justify-center items-center text-center bg-navbar aspect-square text-black p-8 max-w-64 max-h-64 rounded-lg text-3xl">Middle School<br></br>Math<br></br>& English</div>
+                <div className="flex justify-center items-center text-center bg-navbar aspect-square text-black p-14 max-w-64 max-h-64 rounded-lg text-3xl">SAT Math & English</div>
             </div>
             {/* Bottom row with 3 boxes */}
             <div className="flex space-x-4">
-                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 3</div>
-                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 4</div>
-                <div className="flex justify-center content-center bg-navbar aspect-square text-black p-20 rounded-lg text-xl">Box 5</div>
+                <div className="flex justify-center items-center text-center bg-navbar aspect-square text-black p-11 max-w-64 max-h-64 rounded-lg text-3xl">Calculus I<br></br>& Calculus II</div>
+                <div className="flex justify-center items-center text-center bg-navbar aspect-square text-black p-8 max-w-64 max-h-64 rounded-lg text-3xl">High School English</div>
+                <div className="flex justify-center items-center text-center bg-navbar aspect-square text-black p-8 max-w-64 max-h-64 rounded-lg text-3xl">Conversational English</div>
             </div>
           </div>
         </div>
