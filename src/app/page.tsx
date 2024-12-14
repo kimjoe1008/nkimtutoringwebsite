@@ -6,9 +6,6 @@ import { FaLock } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoIosWater } from "react-icons/io";
 import { LuSprout } from "react-icons/lu";
-import Image from "next/image";
-
-
 
 export default function Home() {
   return(
